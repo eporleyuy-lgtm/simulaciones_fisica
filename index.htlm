@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Física</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+    }
+    #simular-container {
+      width: 100%;
+      max-width: 900px;
+      height: 650px;
+    }
+  </style>
+  <!-- Carga de Ruffle -->
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+
+  <div id="simular-container"></div>
+
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      const container = document.getElementById("simular-container");
+      
+      container.appendChild(player);
+      
+      // Reemplaza 'nombre_de_tu_archivo.swf' por el nombre exacto de tu archivo dentro de GitHub
+      player.load("AF_2322.swf"); 
+      
+      player.style.width = "100%";
+      player.style.height = "100%";
+    });
+  </script>
+
+</body>
+</html>

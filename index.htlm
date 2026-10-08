@@ -37,7 +37,7 @@
       container.appendChild(player);
       
       // Reemplaza 'nombre_de_tu_archivo.swf' por el nombre exacto de tu archivo dentro de GitHub
-      player.load("AF_2322.swf"); 
+      player.load("AF_3101.swf"); 
       
       player.style.width = "100%";
       player.style.height = "100%";
